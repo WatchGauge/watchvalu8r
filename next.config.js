@@ -1,3 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { output: 'export' }; // build to ./out
+const nextConfig = {
+  // This makes Next output a static site into ./out
+  output: "export"
+};
 module.exports = nextConfig;
