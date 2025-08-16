@@ -8,6 +8,7 @@ applications:
             - npm install
         build:
           commands:
+            - export NEXT_TELEMETRY_DISABLED=1
             - npm run build
       artifacts:
         baseDirectory: out
