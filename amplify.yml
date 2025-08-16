@@ -5,10 +5,18 @@ applications:
       phases:
         preBuild:
           commands:
+            - echo "=== PHASE: preBuild ==="
+            - node -v
+            - npm -v
             - npm install
+            - npx next --version || true
         build:
           commands:
+            - echo "=== PHASE: build ==="
+            - env | sort | sed -n '1,10p'
+            - export NEXT_TELEMETRY_DISABLED=1
             - npm run build
+            - echo "=== BUILD DONE ==="
       artifacts:
         baseDirectory: out
         files:
