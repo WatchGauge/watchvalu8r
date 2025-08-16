@@ -1,7 +1,3 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',                 // build static site to ./out
-  typescript: { ignoreBuildErrors: true }, // don't fail on TS
-  eslint: { ignoreDuringBuilds: true }     // don't fail on lint
-};
+const nextConfig = { output: 'export' }; // generate static site into ./out
 module.exports = nextConfig;
