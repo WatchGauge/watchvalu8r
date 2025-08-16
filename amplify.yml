@@ -18,3 +18,4 @@ applications:
           - node_modules/**/*
           - .next/cache/**/*
 
+
