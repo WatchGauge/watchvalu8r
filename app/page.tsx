@@ -1,8 +1,9 @@
 export default function HomePage() {
   return (
-    <main style={{ padding: 24 }}>
+    <section>
       <h1>WatchValu8r</h1>
-      <p>Your site is live. If you see this, Amplify built Next.js successfully.</p>
-    </main>
+      <p>If you can read this, the Amplify build and static export worked 🎉</p>
+    </section>
   );
 }
+
