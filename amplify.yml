@@ -14,10 +14,10 @@ applications:
         baseDirectory: out
         files:
           - '**/*'
+      # Disable cache to avoid stale issues
       cache:
-        paths:
-          - node_modules/**/*
-          - .next/cache/**/*
+        paths: []
+
 
 
 
