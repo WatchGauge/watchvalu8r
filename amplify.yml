@@ -5,18 +5,17 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm install
+            - npm ci
         build:
           commands:
-            - export NEXT_TELEMETRY_DISABLED=1
             - npm run build
       artifacts:
         baseDirectory: out
         files:
           - '**/*'
-      # Disable cache to avoid stale issues
       cache:
         paths: []
+
 
 
 
