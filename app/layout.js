@@ -1,4 +1,4 @@
-export const metadata = { title: "WatchValu8r" };
+export const metadata = { title: "WatchGauge" };
 
 export default function RootLayout({ children }) {
   return (
