@@ -1,6 +1,4 @@
 // components/Header.jsx
-import Image from "next/image";
-
 export default function Header() {
   const linkStyle = { color: "#0f172a", textDecoration: "none", fontWeight: 500 };
 
@@ -28,13 +26,12 @@ export default function Header() {
           href="/"
           style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none" }}
         >
-          {/* Use the exact file you verified works */}
-          <Image
-            src="/watchgaugelogofinal.png"
+          {/* Plain <img> to avoid any next/image issues */}
+          <img
+            src="/watchgaugelogofinal.png?v=logo5"
             alt="WatchGauge"
-            width={180}
-            height={40}
-            priority
+            width="180"
+            style={{ height: "auto", display: "block" }}
           />
         </a>
 
@@ -48,3 +45,4 @@ export default function Header() {
     </header>
   );
 }
+
