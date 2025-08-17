@@ -3,15 +3,15 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__inner">
-        {/* Centered Logo */}
         <a href="/" className="header__logo" aria-label="WatchGauge Home">
           <img
-            src="/watchgaugelogofinal.png?v=logo7"
+            src="/watchgaugelogofinal.png?v=logo8"
             alt="WatchGauge"
+            className="logo-img"
           />
         </a>
 
-        {/* Optional centered nav below the logo (keep or remove) */}
+        {/* Optional centered nav (keep or remove) */}
         <nav className="header__nav" aria-label="Main">
           <a href="/" className="header__link">Home</a>
           <a href="/valuation" className="header__link">Valuation</a>
@@ -22,4 +22,5 @@ export default function Header() {
     </header>
   );
 }
+
 
