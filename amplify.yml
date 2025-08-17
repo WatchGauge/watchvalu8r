@@ -3,25 +3,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - "echo '=== PHASE: preBuild ==='"
-        - "node -v"
-        - "npm -v"
-        - "npm config set fund false"
-        - "npm ci || npm install"
+        - node -v
+        - npm -v
+        - npm ci || npm install
     build:
       commands:
-        - "echo '=== PHASE: build ==='"
-        - "export NEXT_TELEMETRY_DISABLED=1"
-        - "npm run build"
-  artifacts:
-    baseDirectory: ".next"
-    files:
-      - "**/*"
-  cache:
-    paths:
-      - "node_modules/**/*"
-      - ".next/cache/**/*"
-      - "~/.npm/**/*"
+        - npx next telemetry disable
+        - npm run build
+# 👇 IMPORTANT: Do NOT define artifacts or cache here.
+# Amplify will auto-detect a Next.js app and deploy it with SSR.
+
 
 
 
