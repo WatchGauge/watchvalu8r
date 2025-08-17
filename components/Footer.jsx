@@ -1,12 +1,12 @@
+// components/Footer.jsx
 export default function Footer() {
   return (
-    <footer style={{ borderTop: "1px solid #e5e7eb", marginTop: 32 }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "20px" }}>
-        <p style={{ color: "#64748b", margin: 0 }}>
+    <footer className="footer">
+      <div className="footer__inner">
+        <p className="footer__text">
           © {new Date().getFullYear()} WatchGauge. All rights reserved.
         </p>
       </div>
     </footer>
   );
 }
-
