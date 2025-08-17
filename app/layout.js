@@ -27,15 +27,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          margin: 0,
-          fontFamily:
-            "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
-        }}
-      >
+      <body className="site-body">
         <Header />
-        <main style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 20px" }}>
+        <main className="site-main">
           {children}
         </main>
         <Footer />
@@ -43,4 +37,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 
