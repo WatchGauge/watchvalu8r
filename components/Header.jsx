@@ -1,3 +1,4 @@
+// components/Header.jsx
 import Logo from "./Logo";
 
 export default function Header() {
@@ -7,7 +8,7 @@ export default function Header() {
     <header style={{ position: "sticky", top: 0, zIndex: 10, background: "white", borderBottom: "1px solid #e5e7eb" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 20px" }}>
         <a href="/" style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-          <Logo width={160} height={40} />
+          <Logo width={180} height={40} />
         </a>
         <nav style={{ display: "flex", gap: 16 }}>
           <a href="/" style={linkStyle}>Home</a>
