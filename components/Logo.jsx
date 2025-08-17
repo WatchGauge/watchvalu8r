@@ -1,7 +1,7 @@
 // components/Logo.jsx
 import Image from "next/image";
 
-export default function Logo({ width = 180, height = 40 }) {
+export default function Logo({ width = 160, height = 40 }) {
   return (
     <Image
       src="/watchgaugelogofinal.png"  // <-- matches your public/ file name
