@@ -1,26 +1,30 @@
 version: 1
-applications:
-  - appRoot: .
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - "echo '=== PHASE: preBuild ==='"
-            - "node -v"
-            - "npm -v"
-            - "npm install"
-        build:
-          commands:
-            - "echo '=== PHASE: build ==='"
-            - "export NEXT_TELEMETRY_DISABLED=1"
-            - "npm run build"
-            - "echo '=== BUILD DONE ==='"
-      artifacts:
-        baseDirectory: out
-        files:
-          - "**/*"
-      cache:
-        paths: []
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo '=== PHASE: preBuild ==='
+        - node -v
+        - npm -v
+        - npm config set fund false           # silence "npm fund" notices
+        - npm ci || npm install
+    build:
+      commands:
+        - echo '=== PHASE: build ==='
+        - export NEXT_TELEMETRY_DISABLED=1    # disable Next telemetry banner
+        - npm run build
+  artifacts:
+    # For Next.js SSR on Amplify, artifacts are not strictly required,
+    # but leaving .next here is harmless and enables caching.
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    # Enables build cache to remove "No build cache found" warning on subsequent builds
+    paths:
+      - node_modules/**/*
+      - .next/cache/**/*
+      - ~/.npm/**/*
 
 
 
