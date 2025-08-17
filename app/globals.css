@@ -53,7 +53,7 @@ button { cursor: pointer; }
   display: block;
   height: auto;
   /* Responsive sizing: bigger on desktop */
-  max-height: 64px; /* mobile/tablet */
+  max-height: 100px; /* mobile/tablet */
 }
 
 /* nav centered row (optional links) */
@@ -76,7 +76,7 @@ button { cursor: pointer; }
     gap: 10px;
   }
   .header__logo img {
-    max-height: 80px; /* bigger on desktop */
+    max-height: 140px; /* bigger on desktop */
   }
 }
 
