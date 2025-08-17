@@ -13,15 +13,15 @@ export const metadata = {
     siteName: "WatchGauge",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "WatchGauge" }],
     locale: "en_US",
-    type: "website",
+    type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "WatchGauge",
     description: "Trusted market valuations for luxury watches.",
-    images: ["/og.jpg"],
+    images: ["/og.jpg"]
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/favicon.ico" }
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +30,8 @@ export default function RootLayout({ children }) {
       <body
         style={{
           margin: 0,
-          fontFamily: "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif",
+          fontFamily:
+            "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
         }}
       >
         <Header />
@@ -43,4 +44,3 @@ export default function RootLayout({ children }) {
   );
 }
 
-}
