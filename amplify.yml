@@ -11,14 +11,13 @@ frontend:
         - npx next telemetry disable
         - npm run build
   artifacts:
-    baseDirectory: .next
+    baseDirectory: out
     files:
       - '**/*'
   cache:
     paths:
       - node_modules/**/*
-      - .next/cache/**/*
-      - ~/.npm/**/* 
+      - ~/.npm/**/*
 
 
 
