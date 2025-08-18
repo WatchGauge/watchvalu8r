@@ -1,4 +1,3 @@
-// app/layout.js
 export const metadata = {
   title: 'WatchGauge',
   description: 'Track and value your watch collection.'
@@ -13,6 +12,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 
 
 
