@@ -10,8 +10,16 @@ frontend:
       commands:
         - npx next telemetry disable
         - npm run build
-# 👇 IMPORTANT: Do NOT define artifacts or cache here.
-# Amplify will auto-detect a Next.js app and deploy it with SSR.
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - .next/cache/**/*
+      - ~/.npm/**/* 
+
 
 
 
