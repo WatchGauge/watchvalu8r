@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Enable static export so Amplify can serve /index.html from the 'out' folder
-  output: 'export',
+  // Static export so Amplify hosts /out/index.html and avoids 404s
+  output: 'export'
 };
 module.exports = nextConfig;
+
