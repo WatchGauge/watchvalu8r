@@ -9,8 +9,12 @@ frontend:
     build:
       commands:
         - "npx next telemetry disable"
+        - "echo === RUN: npm run build ==="
         - "npm run build"
-        - "test -f out/index.html || (echo 'no-out-index' && exit 1)"
+        - "echo === VERIFY EXPORT ==="
+        - "test -f out/index.html || (echo '❌ No out/index.html created' && ls -la && ls -la out || true && exit 1)"
+        - "echo ✅ Found out/index.html"
+        - "echo === LIST OUT DIR ==="
         - "ls -la out"
   artifacts:
     baseDirectory: out
