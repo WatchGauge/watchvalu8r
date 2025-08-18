@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export'   // <- required for static files in /out
+  output: 'export'
 };
 module.exports = nextConfig;
-
-
